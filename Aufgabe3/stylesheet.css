@@ -1,0 +1,12 @@
+body {background-color: #FFFFEF }
+header { background-color: #F46257; margin: 0px; padding: 0px }
+h1 {color: #FFFFEF; text-align: center; font-family: Gloss And Bloom; padding-top: 1em; font-size: 70px}
+nav ul{list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; text-align: center; padding-bottom: 2em}
+article {margin: 6em}
+article:nth-child(odd) {background: #218CA5}
+article:nth-child(odd) h2{font-family: Raleway; font-style: oblique; font-size: 35px; color: #BAF2E8; padding-left: 1em; padding-top: 1em }
+article:nth-child(even) {background: #F46257}
+article:nth-child(even) h2{font-family: Raleway; font-style: oblique; font-size: 35px; color: #FDB1AC; padding-left: 1em; padding-top: 1em}
+section {width: 80%; padding-left: 2em;}
+p {font-family: Raleway; font-size: 90%; color: #FFFFEF; text-align: justify; padding-bottom: 1em}
+section:last-child {padding-bottom: 2em}
