@@ -1,7 +1,7 @@
-body {background-color: #FFFFEF; margin: 0px}
+body {background-color: #ffffff; margin: 0px}
 header { background-color: #F46257; margin: 0px; padding: 0px; border: 0px}
-h1 {color: #FFFFEF; text-align: center; font-family: Gloss And Bloom; padding-top: 1em; padding-bottom: 0px; font-size: 70px}
-nav ul{list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; text-align: center; padding-bottom: 2em; padding-top: 0}
+h1 {color: #FFFFFF; text-align: center; font-family: Gloss And Bloom; padding-top: 1em; padding-bottom: 0px; font-size: 70px}
+nav ul{list-style-type: none; font-family: Raleway; color: #FFFFFF; font-size: 20px; text-align: center; padding-bottom: 2em; padding-top: 0}
 nav li{display: inline; padding: 2em}
 article {margin: 7em}
 article:nth-child(odd) {background: #218CA5}
