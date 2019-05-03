@@ -1,15 +1,77 @@
-body {background-color: #FFFFEF; margin: 0px}
-header { background-color: #F46257; margin: 0px; padding: 0px; border: 0px}
-h1 {color: #FFFFEF; text-align: center; font-family: Gloss And Bloom; padding-top: 1em; padding-bottom: 0px; font-size: 70px}
-nav ul{list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; text-align: center; padding-bottom: 2em; padding-top: 0}
-nav li{display: inline; padding: 2em}
-article {margin: 7em}
-article:nth-child(odd) {background: #218CA5}
-article:nth-child(odd) h2{font-family: Raleway; font-style: oblique; font-size: 35px; color: #BAF2E8; padding-left: 1em; padding-top: 1em}
-article:nth-child(even) {background: #F46257}
-article:nth-child(even) h2{font-family: Raleway; font-style: oblique; font-size: 35px; color: #FDB1AC; padding-left: 1em; padding-top: 1em}
-section {width: 70%; padding-left: 2em; padding-right: 2em;}
-p {font-family: Raleway; font-size: 90%; color: #FFFFEF; text-align: justify; padding-bottom: 1em; }
-section:last-child {padding-bottom: 2em}
-img {border-radius: 8px;   display: block; margin-left: auto; margin-right: 3em; width: 20%;float:right}
-footer .autorinfo{font-family: 'Courier New', Courier, monospace; font-size: 20px; color:#F46257; padding-left: 10em; padding-right: 10em; margin-top: 2em; margin-bottom: 2em; display: inline}
+body {
+    background-color: #FFFFEF; margin: 0px
+}
+header {
+     background-color: black; margin: 0px; padding: 0px; border: 0px
+    }
+h1 {
+    color: #FFFFEF; text-align: center; font-family: Gloss And Bloom; padding-top: 1em; padding-bottom: 0px; font-size: 70px; margin: 0px
+}
+nav ul{
+    list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; text-align: center; padding-bottom: 2em; padding-top: 0
+}
+nav li{
+    display: inline; padding: 2em
+}
+nav li.Toronto{
+color: #F46257
+}
+nav li.NewYork{
+    color: #218CA5
+    }
+nav li.Washington{
+        color: #FFEE33
+        }
+main {
+    width: 60%;  margin: 7em
+}
+div {
+    float: left;
+    width: 26%; 
+    height: 25em;
+    overflow: auto;
+    overflow-x: hidden;
+    border-style: solid; border-width: 10px 0px 0px 0px;  margin: 2em; background: white
+}
+main > div:nth-child(3+1) {
+    clear: left
+}
+div.Toronto {
+    border-color: #F46257;
+}
+div.NewYork {
+    border-color: #218CA5;
+}
+div.Washington {
+    border-color: #FFEE33;  
+}
+article h2{
+    font-family: Raleway; font-style: oblique; font-size: 25px; color: black; padding-left: 1em;padding-right: 1em; padding-top: 0.5em; margin: 0
+}
+section {
+    width: 80%; padding-left: 1.5em; padding-right: 1.5em ; 
+}
+p {
+    font-family: Raleway; font-size: 90%; color: black; text-align: justify; margin: 0; padding-top: 0.5em
+}
+section:last-child {
+    padding-bottom: 2em
+}
+img {
+    padding: 1.5em; width: 80%; height:auto
+}
+footer{
+    width: 100%; margin-bottom: 0; margin-top: 3em; position: relative; background-color: black; clear: both; text-align: center; padding-top: 5em ; padding-bottom: 5em
+}
+footer .autorinfo{
+    font-family: 'Courier New', Courier, monospace; font-size: 20px; color: white; display: inline; padding: 5em; text-align: center; margin:0;
+}
+aside {
+    background: #BBBBBB; float: right; width: 20%; ; padding: 2em; position: relative; right: 3em; top: 6em;
+}
+aside:hover { 
+    right: 4em; padding-right: 5em;
+}
+aside h3 {
+    font-family: Raleway; font-style: italic; font-size: 25px; color: #FFFFEF
+}
