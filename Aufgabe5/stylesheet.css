@@ -31,7 +31,7 @@ div {
     height: 25em;
     overflow: auto;
     overflow-x: hidden;
-    border-style: solid; border-width: 10px 0px 0px 0px;  margin: 2em; background: white
+    border-style: solid; border-width: 10px 0px 0px 0px;  margin: 1.5em; background: white
 }
 main > div:nth-child(3+1) {
     clear: left
