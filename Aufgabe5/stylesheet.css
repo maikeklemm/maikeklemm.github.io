@@ -27,11 +27,14 @@ main {
 }
 div {
     float: left;
-    width: 26%; 
+    width: 28%; 
     height: 25em;
     overflow: auto;
     overflow-x: hidden;
     border-style: solid; border-width: 10px 0px 0px 0px;  margin: 1.5em; background: white
+}
+div:last-child{
+margin-bottom: 10em
 }
 main > div:nth-child(3+1) {
     clear: left
@@ -61,16 +64,16 @@ img {
     padding: 1.5em; width: 80%; height:auto
 }
 footer{
-    width: 100%; margin-bottom: 0; margin-top: 3em; position: relative; background-color: black; clear: both; text-align: center; padding-top: 5em ; padding-bottom: 5em
+    width: 100%; margin-bottom: 0; margin-top: 6em; position: relative; background-color: black; clear: both; text-align: center; padding-top: 5em ; padding-bottom: 5em
 }
 footer .autorinfo{
-    font-family: 'Courier New', Courier, monospace; font-size: 20px; color: white; display: inline; padding: 5em; text-align: center; margin:0;
+    font-family: 'Courier New', Courier, monospace; font-size: 20px; color: white; display: inline; padding: 5em; text-align: center; margin-top: 6em
 }
 aside {
     background: #BBBBBB; float: right; width: 20%; ; padding: 2em; position: relative; right: 3em; top: 6em;
 }
 aside:hover { 
-    right: 4em; padding-right: 5em;
+    right: 4em; padding-right: 5em; 
 }
 aside h3 {
     font-family: Raleway; font-style: italic; font-size: 25px; color: #FFFFEF
