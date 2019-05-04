@@ -77,7 +77,7 @@ footer .autorinfo{
     font-family: 'Courier New', Courier, monospace; font-size: 20px; color: white; display: inline; padding: 5em; text-align: center; margin-top: 6em
 }
 aside {
-    background: white; float: right; width: 20%; ; padding: 2em; position: relative; right: 3em; top: 6em; border: #bdbdbd ;  border-style: solid; border-width: 0.5px
+    background: white; float: right; width: 20%; ; padding: 2em; position: relative; right: 3em; top: 6em; border: #bdbdbd ;  border-style: solid; border-width: 0.5px; margin: 3em 3em 7em 3em
 }
 
 aside:hover { 
