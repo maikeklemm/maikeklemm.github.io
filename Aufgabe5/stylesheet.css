@@ -38,7 +38,7 @@ div {
     height: 25em;
     overflow: hidden;
     overflow-x: hidden;
-    border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  margin: 1.5em; background: white
+    border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  margin: 1.5em; background: white; 
 }
 div:last-child{
 margin-bottom: 10em
@@ -47,7 +47,7 @@ main > div:nth-child(3+1) {
     clear: left
 }
 div.Toronto {
-    border-top-color: #F46257; border-bottom-color: #bdbdbd; border-left-color: #bdbdbd; border-right-color: #bdbdbd 
+    border-top-color: #F46257; border-bottom-color: #bdbdbd; border-left-color: #bdbdbd; border-right-color: #bdbdbd ;
 }
 div.NewYork {
     border-color: #218CA5; border-bottom-color: #bdbdbd; border-left-color: #bdbdbd;border-right-color: #bdbdbd 
