@@ -1,0 +1,160 @@
+     
+
+   
+    main{
+        width: 80% ; float: none; margin: auto
+    }  
+      main div {
+          width: 99%; margin: auto;margin-bottom: 2em; margin-top: 2em
+          float: left; 
+         
+        height: 25em;
+        overflow: hidden;
+        overflow-x: hidden;
+        border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  background: white;
+        transition: border-color 0.5s 
+        }
+
+        aside{
+            width: 80%; position: initial;float: none; margin: auto; margin-top: 2em ; margin-bottom: 2em;
+            background: white;  padding: 2em;  right: 3em; top: 6em; border: #bdbdbd ;  border-style: solid; border-width: 0.5px;
+        }
+       
+        nav ul{
+            text-align: center;
+            list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; padding-top: 0em; 
+        }
+      footer .autorinfo {
+          padding: 0.5em; font-size: 20px; display: block; margin: 0em;
+          font-family: 'Courier New', Courier, monospace;  color: white;   text-align: center; 
+    }
+    
+body {
+    background-color:#fafafa
+    ; margin: 0px
+}
+header {
+     background-color: #151515; margin: 0px; padding: 0px; border-color:#bdbdbd;  border-style: solid; border-width: 0px 0px 2px 0px; width: 100%;top: 0px; height: 7em; overflow: hidden; 
+     transition: height 0.5s
+       }
+
+header:hover{
+      height: 27em;
+ }
+h1 {
+    color:white ; text-align: left; font-family: Gloss And Bloom; padding: 1em 1em 0em 1.5em; font-size: 30px; margin: 0px ;float: left ; 
+}
+
+nav li{
+    display: block; padding: 1em; padding-right: 1.5em
+}
+nav li:first-child{
+    padding-top: 6em
+}
+nav li.Toronto a{
+color: #F46257
+}
+nav li.NewYork a{
+    color: #218CA5
+    }
+nav li.Washington a{
+        color: #FFEE33
+        }
+nav li a{
+    color: #bdbdbd
+}
+nav li a:hover{
+            color: #FFFFEF
+            }
+nav img { position: absolute;
+         width:3em;
+        padding: 0.5em 2em 1em 1em;
+         right: 0px;
+       
+}
+
+main div:hover{
+    border-top-color: #bdbdbd
+}
+div:last-child{
+margin-bottom: 10em
+}
+main > div:nth-child(3+1) {
+    clear: left
+}
+div.Toronto {
+    border-top-color: #F46257; border-bottom-color: #bdbdbd; border-left-color: #bdbdbd; border-right-color: #bdbdbd ;
+}
+div.NewYork {
+    border-color: #218CA5; border-bottom-color: #bdbdbd; border-left-color: #bdbdbd;border-right-color: #bdbdbd 
+}
+div.Washington {
+    border-color: #FFEE33;   border-bottom-color: #bdbdbd; border-left-color: #bdbdbd;border-right-color: #bdbdbd 
+}
+article h2{
+    font-family: Raleway; font-style: oblique; font-size: 25px; color: black; padding-left: 1em;padding-right: 1em; padding-top: 0.5em; margin: 0
+}
+section {
+    width: 80%; padding-left: 1.5em; padding-right: 1.5em ; 
+}
+p {
+    font-family: Raleway; font-size: 90%; color: black; text-align: justify; margin: 0; padding-top: 0.5em
+}
+section:last-child {
+    padding-bottom: 2em
+}
+main img {
+    padding: 1.5em; width: 80%; height:auto
+}
+footer{
+    width: 100%; margin-bottom: 0; margin-top: 6em; position: relative; background-color: #151515; clear: both; text-align: center; padding-top: 5em ; padding-bottom: 5em; 
+}
+
+aside h3 {
+    font-family: Raleway; font-style: italic; font-size: 25 px; color: #151515; border-width: 0px 0px 0px 0px; border-bottom: #bdbdbd ;  border-style: solid;
+        }
+
+ 
+
+@media only screen and (min-width: 850px) {
+    
+    main div {
+        float: left;
+        width:40%; 
+        height: 25em;
+        overflow: hidden;
+        overflow-x: hidden;
+        border-style: solid; border-width: 0.8em 0.01em 0.01em 0.01em;   background: white;
+        transition: border-color 0.5s ;
+        margin: 2em; 
+    }
+   
+              }
+
+@media only screen and (min-width: 1400px) {
+    main {
+        width: 60%;  margin: 7em
+    }
+    main div {
+        float: left;
+        width:27%; 
+        height: 25em;
+        overflow: hidden;
+        overflow-x: hidden;
+        border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  margin: 1.5em; background: white;
+        transition: border-color 0.5s 
+    }
+    nav ul{
+        list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; text-align: right; ; padding-top: 0em; 
+    }
+    aside {
+        background: white; float: right; width: 20%;  padding: 2em; position: relative; right: 3em; top: 6em; border: #bdbdbd ;  border-style: solid; border-width: 0.5px; margin: 3em 3em 7em 3em
+    }
+    footer .autorinfo{
+        font-family: 'Courier New', Courier, monospace; font-size: 20px; color: white; display: inline; padding: 5em; text-align: center; margin-top: 6em
+    }
+}
+
+ 
+
+
