@@ -88,7 +88,7 @@ nav img { position: absolute;
 }
 
 main div:hover{
-   border-style: dotted
+   border-top-style: dotted
 }
 div:last-child{
 margin-bottom: 10em
