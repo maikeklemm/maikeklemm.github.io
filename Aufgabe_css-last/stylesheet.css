@@ -11,7 +11,7 @@
         height: 25em;
         overflow: hidden;
         overflow-x: hidden;
-        border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  background: white;
+        border-style: solid;border-width: 0.8em 0.01em 0.01em 0.01em;  background: white;
         transition: border-color 0.5s 
         }
 
@@ -22,8 +22,10 @@
        
         nav ul{
             text-align: center;
-            list-style-type: none; font-family: Raleway; color: #FFFFEF; font-size: 20px; padding-top: 0em; 
+            list-style-type: none; font-family: Arial, Helvetica, sans-serif; color: #FFFFEF; font-size: 20px; padding-top: 0em; 
+           
         }
+
       footer .autorinfo {
           padding: 0.5em; font-size: 20px; display: block; margin: 0em;
           font-family: 'Courier New', Courier, monospace;  color: white;   text-align: center; 
@@ -38,11 +40,23 @@ header {
      transition: height 0.5s
        }
 
-header:hover{
-      height: 27em;
+header:hover {
+      height: 27em; 
  }
+
+@keyframes Websitelogo{
+    
+  33%{color: #F46257}
+ 66% {color: #218CA5}
+    99%{color: #FFEE33}
+   
+}
+
 h1 {
-    color:white ; text-align: left; font-family: Gloss And Bloom; padding: 1em 1em 0em 1.5em; font-size: 30px; margin: 0px ;float: left ; 
+    color:white ; text-align: left; font-family: 'Courier New', Courier, monospace; font-style: oblique;  padding: 1.5em 1em 1em 1.5em; font-size: 30px; margin: 0px ;float: left ; 
+    animation-name: Websitelogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 nav li{
@@ -74,7 +88,7 @@ nav img { position: absolute;
 }
 
 main div:hover{
-    border-top-color: #bdbdbd
+   border-style: dotted
 }
 div:last-child{
 margin-bottom: 10em
@@ -92,13 +106,13 @@ div.Washington {
     border-color: #FFEE33;   border-bottom-color: #bdbdbd; border-left-color: #bdbdbd;border-right-color: #bdbdbd 
 }
 article h2{
-    font-family: Raleway; font-style: oblique; font-size: 25px; color: black; padding-left: 1em;padding-right: 1em; padding-top: 0.5em; margin: 0
+    font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: 25px; color: black; padding-left: 1em;padding-right: 1em; padding-top: 0.5em; margin: 0
 }
 section {
     width: 80%; padding-left: 1.5em; padding-right: 1.5em ; 
 }
 p {
-    font-family: Raleway; font-size: 90%; color: black; text-align: justify; margin: 0; padding-top: 0.5em
+    font-family:Arial, Helvetica, sans-serif; font-size: 90%; color: black; text-align: justify; margin: 0; padding-top: 0.5em
 }
 section:last-child {
     padding-bottom: 2em
@@ -111,7 +125,7 @@ footer{
 }
 
 aside h3 {
-    font-family: Raleway; font-style: italic; font-size: 25 px; color: #151515; border-width: 0px 0px 0px 0px; border-bottom: #bdbdbd ;  border-style: solid;
+    font-family: Arial, Helvetica, sans-serif; font-style: italic; font-size: 25 px; color: #151515; border-width: 0px 0px 0px 0px; border-bottom: #bdbdbd ;  border-style: solid;
         }
 
  
@@ -141,7 +155,7 @@ aside h3 {
         height: 25em;
         overflow: hidden;
         overflow-x: hidden;
-        border-style: solid; border-width: 10px 0.5px 0.5px 0.5px;  margin: 1.5em; background: white;
+        border-style: solid; border-width: 0.8em 0.01em 0.01em 0.01em;  margin: 1.5em; background: white;
         transition: border-color 0.5s 
     }
     nav ul{
