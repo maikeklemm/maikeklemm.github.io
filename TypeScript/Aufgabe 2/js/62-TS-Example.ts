@@ -24,9 +24,9 @@ interface Monster {
     monsterExperience : number; // Erfahrungspunkte bei besiegen des Monsters
     monsterModifier : string [];     // Monster-Verstärker. Diese sind in diesem Fall nur Text! (Da hier einfacher Zufall für die Auswahl genutzt wird, kann der gleiche Eintrag auch doppelt vorkommen)
    
-    monstersnack : string[];          //Snack für monster
+    monsterSnack : string;          //Snack für monster
     
-
+    monsterBild: string;                //Bild des Monsters
 
 }
 
@@ -47,12 +47,16 @@ let suffix : string[] = [" des Verderbens", " aus der Hölle", " der Lethalität
 
 let monsterModifers : string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "Verfehlt häufig", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
 
-let monstersnack : string [] = ["Butter Toast", "Toast Hawaii", "French Toast", "Schinken Käse Toast"];
+let monsterSnack2 : string [] = ["Butter Toast", "Toast Hawaii", "French Toast", "Schinken Käse Toast"];
+
+let monsterBildSrc : string[] = ["imgs/monster1.jpg", "imgs/monster2.jpg", "imgs/monster3.jpg"]; 
+
+
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray : Monster[] = []; // Das Haupt-Array wurde erstellt und initialisiert!
 console.log(monsterArray ); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
 
-let Monsterbilder : string [] =["monster1.jpg", "monster2.jpg", "monster3.jpg"];
+
 
 // ----------- Funktionen ----------- //
 // INSGESAMT EINGEBAUTE FEHLER bei den Funktionen: IIIII (5 / fünf)
@@ -77,17 +81,18 @@ function generateMonster()
     let newMonsterXP : number = generateMonsterXP();                    // Eigens-gebaute Funktion, welche eine Zahl zurück gibt.
     let newMonsterModifier : string[] = generateMonsterModifer();       // Eigens-gebaute Funktion, welche ein string-Array zurück gibt.
    
-    let newMonstersnack : string[] = generatemonstersnack();
+    let newMonsterSnack : string = generatemonsterSnack();
   
-
+    let newMonsterBild : string = generateMonsterBild();
+  
 
     let newMonster : Monster = {                                        // Monster wird erstellt.
         monsterName : newMonsterName, 
         monsterHealthPoints : newMonsterHP,
         monsterExperience : newMonsterXP,
         monsterModifier : newMonsterModifier,
-        monstersnack : newMonstersnack  
-   
+        monsterSnack : newMonsterSnack, 
+        monsterBild : newMonsterBild, 
         ///Fehler entfernt
     }
 
@@ -114,15 +119,20 @@ function monsterGenerateHTML()
     monsterMod.innerHTML = monsterArray[monsterArray.length - 1].monsterModifier[0] + ", " +  monsterArray[monsterArray.length -1].monsterModifier[1]; // Inhalt des <p>: Monster-Modifizierer null und eins
     holdingDiv.appendChild(monsterMod);                                // Füge das <p> zum HTML-Dokument hinzu, indem es dem holding-Div angefügt wird.
 
-    let monstersnack : HTMLElement = document.createElement("p");        // Generiere einen <p>
-    monsterMod.innerHTML = monsterArray[monsterArray.length - 1].monsterModifier[0] + ", " +  monsterArray[monsterArray.length -1].monsterModifier[1]; // Inhalt des <p>: Monster-Modifizierer null und eins
-    holdingDiv.appendChild(monsterMod);  
+    let monsterSnack : HTMLElement = document.createElement("p");        // Generiere einen <p>
+    monsterSnack.innerHTML = "mit " + monsterArray[monsterArray.length - 1].monsterSnack[0]  // Inhalt des <p>: Monster-Modifizierer null und eins
+    holdingDiv.appendChild(monsterSnack);  
+
+
 
 
     let monsterImg : HTMLElement = document.createElement("img");       // Erstelle ein <img>-Element
-    monsterImg.setAttribute("src", "imgs/pinguin.png");                 // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
+    monsterImg.setAttribute("src", monsterArray[monsterArray.length - 1].monsterBild);    // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
     monsterImg.setAttribute("alt", "Schreckliches Monster");            // Das alt für das Bild wird hier festgelegt.
-    holdingDiv.appendChild(monsterImg);                                 // Füge das Bild zu dem holding-div hinzu (<div>, welche ein paar Zeilen zuvor erstellt worden ist)
+    holdingDiv.appendChild(monsterImg); 
+
+
+
 
     let monsterBtn : HTMLElement = document.createElement("BUTTON");    // Erstelle ein <button>-Element
     monsterBtn.innerHTML = "Monster bekämpfen!!!";                        // Verändere den Inhalt des HTML-Elementes. Der genaue Text ist dabei euch überlassen.
@@ -174,6 +184,11 @@ function generateMonsterName() : string
     return generatedMonsterName;
 }
 
+function generateMonsterBild() : string{                                        //generiert ein zufälliges bild
+    let rngNumber : number = getRNGNumber(monsterBildSrc.length);
+    let generatedMonsterImage : string = monsterBildSrc[rngNumber];
+    return generatedMonsterImage;
+}
 
 // Wird für die Monster-Lebenspunkte aufgerufen.
 // Liefert eine variierende Zahl zurück.
@@ -190,7 +205,7 @@ function generateMonsterHitPoints() : number
 function generateMonsterXP() : number
 {
     // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 350) + 100 zurück.
-    let tempMonsterXP : number = 100 + getRNGNumber(350);
+    let tempMonsterXP : number = 100 + getRNGNumber(700);
     return tempMonsterXP;
 }
 
@@ -205,14 +220,14 @@ function generateMonsterModifer() : string[]
     return tempMonsterMod;                                                      // Gebe das hier zusammengesetzte Array wieder zurück.
 }
 
-function generatemonstersnack() : string[]                                      
+function generatemonsterSnack() : string[]                                      
 {
-    let tempMonstersnack : string[] = [];                                         
-    tempMonstersnack[0] = monstersnack[getRNGNumber(monstersnack.length)];  
+    let tempMonsterSnack : string[] = [];                                         
+    tempMonsterSnack[0] = monsterSnack2[getRNGNumber(monsterSnack2.length)];  
     
-    return tempMonstersnack;                                                     
+    return tempMonsterSnack;                                                     
 }
-
+ 
 
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
@@ -236,3 +251,15 @@ function updatePlayerLevel()
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + tempLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")";       // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + tempLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)");        // Spieler-Level in der Konsole.
 }
+
+function neuerMonsterSnack() {
+    console.log("mehr Auswahl an Snacks");
+    monsterSnack2.push("Dinkelbrot");
+    monsterSnack2.push("Gummibärchen");
+    monsterSnack2.push("Aprikosen");
+
+}
+
+neuerMonsterSnack()
+console.log(monsterSnack2)
+
