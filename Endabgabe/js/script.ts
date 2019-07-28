@@ -209,30 +209,20 @@ let spielflächeArray: Karten[] = [];
 // wenn seite geladen wird
 
 window.onload = function (){
-    generateZiehstapel();
-    document.getElementById("Ziehstapelneu").addEventListener("click", KarteZiehen)  ;
+    generateZiehstapel();                       // die funktion die den ziehstapel generiert soll sofort ausgeführt werden
+    document.getElementById("Ziehstapelneu").addEventListener("click", KarteZiehen)  ;          //der event Listener soll von anfang an darauf reagieren wenn auf den ziehstapel geklickt wird
 }
 //Funktionen
 
 
 function generateZiehstapel() {                                                 
-    let Ziehstapelneu: HTMLImageElement = document.createElement("img");
-    Ziehstapelneu.setAttribute("src", "img/ruckseite.jpg")
+    let Ziehstapelneu: HTMLImageElement = document.createElement("img");            // der Ziehstapel wird als sichtbares html element generiert
+    Ziehstapelneu.setAttribute("src", "img/ruckseite.jpg")                          
    
-   
-   // let Ziehstapelneu: HTMLElement = document.createElement("button");
-
     Ziehstapelneu.setAttribute("id", "Ziehstapelneu");
-    document.getElementById("ziehstapel").appendChild(Ziehstapelneu);
+    document.getElementById("ziehstapel").appendChild(Ziehstapelneu);               
 
-   // document.getElementById ("Ziehstapelneu") .innerHTML = "img/ruckseite.jpg";      
-
-
-
-
-
-
-
+  
 
     ziehstapelArray.sort(function (a, b) {                  // mischt den Stapel
         return 0.5 - Math.random()
@@ -241,7 +231,7 @@ function generateZiehstapel() {
 }
 
 function austeilen() {
-    for (let i: number = 0; i <= 3; i++) {
+    for (let i: number = 0; i <= 3; i++) {          //es wird solange ausgeteilt bis i größer ist als 3, also dass jeder 4 karten hat.
         console.log("ausgeteilt");
         player1Array.push(ziehstapelArray[0]);      //Verteilung der Karten an spieler
         ziehstapelArray.splice(0, 1);
@@ -263,7 +253,7 @@ function ausspielen(Kartennummer: number) {
             spielflächeArray.push (player1Array[Kartennummer]);
             player1Array.splice (Kartennummer,1);
             console.log("Du hast eine Karte gelegt");
-            if(player1Array.length == 0){
+            if(player1Array.length == 0){               //wenn der spieler keine karte mehr hat wird ein alert ausgegeben
                 alert("Du hast gewonnen!");
                 console.log ("Du hast gewonnen!");
                 
@@ -276,12 +266,12 @@ function ausspielen(Kartennummer: number) {
 
 
 function showKarten() {
-    document.getElementById("spieler1").innerHTML = "";                         // Anzeigen der Karten des SPieler1
-    for (let i: number = 0; i <= player1Array.length - 1; i++) {
-        let neueKarte: HTMLImageElement = document.createElement("img");
+    document.getElementById("spieler1").innerHTML = "";                        // das div in dem die karten des spielers liegen wird zu beginn geleert
+    for (let i: number = 0; i <= player1Array.length - 1; i++) {                //solange der spieler karten hat, wird die schleife ausgeführt
+        let neueKarte: HTMLImageElement = document.createElement("img");         // Die karte wird im html dokument erstellt und somit auf der website angezeigt
         neueKarte.innerHTML="";
         neueKarte.setAttribute("src", player1Array[i].Bild);
-        neueKarte.addEventListener('click', function(){ ausspielen(i); },false);
+        neueKarte.addEventListener('click', function(){ ausspielen(i); },false);    //wenn eine karte geklickt wird, soll die funktion ausspielen angewendet werden
 
         document.getElementById("spieler1").appendChild(neueKarte);
 
@@ -308,7 +298,7 @@ function showKarten() {
  
 
 function KarteZiehen () {
-   if(ziehstapelArray.length>0){ player1Array.push(ziehstapelArray[0]);      //wenn der spieler nicht kann muss er ziehen, wobei er eine karte aus dem stapel bekommt
+   if(ziehstapelArray.length>0){ player1Array.push(ziehstapelArray[0]);      //wenn der spieler nicht kann muss er ziehen, wobei er eine karte aus dem stapel bekommt, solange dieser noch karten enthält
     ziehstapelArray.splice(0, 1);
     showKarten();
     console.log ("Du hast eine Karte gezogen");
@@ -323,8 +313,8 @@ function KarteZiehen () {
             computerArray[i].Zahl == spielflächeArray [spielflächeArray.length -1] .Zahl ) {
                 spielflächeArray.push (computerArray[i]);
                 computerArray.splice (i,1);
-                Kartegespielt=true;
-                i=100;
+                Kartegespielt=true;                             //damit der computer im nächsten schritt keine karte zieht, da er ja schon eine gelegt hat, ist dieser boolean hier auf true gesetzt
+                i=100;                                         // um die schleife zu stoppen, da schon eine karte gelegt wurde und keine weiteren mehr gelegt werden sollen, habe ich i auf 100 gesetzt
                 showKarten();
                 console.log ("Der Computer hat eine Karte gelegt");
          }
