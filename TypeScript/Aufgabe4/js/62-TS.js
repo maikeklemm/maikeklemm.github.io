@@ -202,7 +202,7 @@ function fightMonster(_index = monsterArray.length) {
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
 function updatePlayerLevel() {
     playerLevel = Math.floor(playerXP / playerXPperLevel);
-    if (playerLevel === 20) {
+    if (playerLevel == 20) {
         alert("Du hast gewonnen!!!");
     }
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + playerLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")"; // Baue den String für die Spieler-Info zusammen

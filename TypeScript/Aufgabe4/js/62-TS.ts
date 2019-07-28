@@ -337,10 +337,11 @@ function fightMonster(_index : number = monsterArray.length )
 function updatePlayerLevel()
 {
     
-    playerLevel = Math.floor(playerXP / playerXPperLevel); 
+    playerLevel = Math.floor(playerXP / playerXPperLevel ); 
    
+    
 
-    if (playerLevel === 20)     {
+    if (playerLevel == 20)     {
             alert("Du hast gewonnen!!!")
     }                                                 
     
