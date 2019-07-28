@@ -241,7 +241,7 @@ function ausspielen(Kartennummer) {
 }
 function showKarten() {
     document.getElementById("spieler1").innerHTML = ""; // das div in dem die karten des spielers liegen wird zu beginn geleert
-    for (let i = 0; i <= player1Array.length - 1; i++) { //solange der spieler karten hat, wird die schleife ausgeführt
+    for (let i = 0; i <= player1Array.length - 1; i++) {
         let neueKarte = document.createElement("img"); // Die karte wird im html dokument erstellt und somit auf der website angezeigt
         neueKarte.innerHTML = "";
         neueKarte.setAttribute("src", player1Array[i].Bild);
